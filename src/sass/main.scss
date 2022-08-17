@@ -1,0 +1,23 @@
+@import-normalize;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+
+@import "./variable";
+
+
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'Nunito Sans', sans-serif ;
+  margin: 0;
+  font-size: 16px;
+  color: $text-light;
+  font-weight: 300;
+  background-color: $bg-light-color;
+
+}

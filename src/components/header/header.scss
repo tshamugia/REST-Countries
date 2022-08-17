@@ -1,0 +1,31 @@
+@import "../../sass/variable";
+
+.header{
+    height: 3rem;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+
+    .header_container{
+        width: 100%;
+        max-width: 90rem;
+        margin: 0 auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title{
+            font-size: $text-light;
+            font-weight: 600;
+        }
+
+        button{
+            font-size: 12px;
+            border: none;
+            background-color: $bg-light-color ;
+            cursor: pointer;
+        }
+    }
+}
