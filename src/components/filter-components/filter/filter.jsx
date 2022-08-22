@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function FilterByRegion() {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState("Select by region...");
+  const [selected, setSelected] = useState("Filter by Region...");
 
   const options = ["Europe", "Asia", "America", "Africa", "Oceania"];
 

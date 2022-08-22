@@ -1,12 +1,12 @@
-import FilterLayout from "./components/filter-components/filter.layout";
-import Header from "./components/header/header";
+
+import Dashboard from "./pages/dashboard/dashboard";
 
 function App() {
   return (
     <>
-      <Header />
-      <FilterLayout />
-    </>
+     <Dashboard/>
+     </>
+    
   );
 }
 

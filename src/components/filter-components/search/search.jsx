@@ -6,7 +6,7 @@ function Search() {
     <form className="search">
       <div className="search__box">
         <ImSearch style={{ color: "grey" }}></ImSearch>
-        <input type="text" placeholder="Search by Country name ..." style={{ color: "gray" }}></input>
+        <input type="text" placeholder="Search for a Country..." style={{ color: "gray" }}></input>
       </div>
     </form>
   );

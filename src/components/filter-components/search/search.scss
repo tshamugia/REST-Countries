@@ -10,7 +10,7 @@
 
   .search__box {
     width: 100%;
-    border: 1px solid rgb(227, 224, 224);
+    border: none;
     border-radius: 0.2rem;
     padding: 0.5rem;
     display: flex;
@@ -23,7 +23,7 @@
     border: none;
     height: 100%;
     width: 100%;
-    background-color: $bg-light-color;
+    background-color: $ui-light-base;
 
     &:focus {
       box-shadow: none;
