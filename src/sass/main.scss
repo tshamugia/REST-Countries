@@ -1,23 +1,26 @@
 @import-normalize;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 @import "./variable";
 
-
-*{
+* {
   box-sizing: border-box;
 }
 
+body[data-theme="dark"] {
+  background-color: $bg-dark-color;
+  color: $text-dark;
+}
 
-body{
-  font-family: 'Nunito Sans', sans-serif ;
+body[data-theme="light"] {
+  background-color: $bg-light-color;
+  color: $text-light;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
   margin: 0;
   font-size: 16px;
-  color: $text-light;
   font-weight: 300;
-  background-color: $bg-light-color;
-
 }

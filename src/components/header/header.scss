@@ -1,31 +1,39 @@
 @import "../../sass/variable";
 
-.header{
-    height: 3rem;
-    border: 1px solid green;
+.header[data-theme="dark"] {
+  background-color: $ui-dark-base;
+  color: $text-dark;
+}
+
+.header[data-theme="light"] {
+  background-color: $ui-light-base;
+  color: $text-light;
+  border-bottom: 0.1rem solid rgb(246, 236, 236);
+}
+
+.header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+
+  .header_container {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    .header_container{
-        width: 100%;
-        max-width: 90rem;
-        margin: 0 auto;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .title{
-            font-size: $text-light;
-            font-weight: 600;
-        }
-
-        button{
-            font-size: 12px;
-            border: none;
-            background-color: $bg-light-color ;
-            cursor: pointer;
-        }
+    .title {
+      font-size: 16px;
+      font-weight: 600;
     }
+
+    .switcher {
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
 }

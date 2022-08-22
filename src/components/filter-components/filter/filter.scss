@@ -1,0 +1,73 @@
+@import "../../../sass/variable";
+
+.dropdown {
+  width: 100%;
+  max-width: 15rem;
+  position: relative;
+  margin: 2rem;
+
+  @media (max-width: 600px) {
+    max-width: 90vw;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__select {
+    background-color: $bg-light-color;
+    color: $text-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px rgb(230, 228, 228) solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: $ui-light-base;
+    }
+
+    &--caret {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid rgb(230, 228, 228);
+      transition: 0.3s;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0.2rem 0.5rem;
+    background: $bg-light-color;
+    border: 1px solid $bg-light-color;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    color: $text-light;
+    position: absolute;
+    top: 9.3rem;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    li {
+      padding: 0.7rem 0.5rem;
+      margin: 0.3 0;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background: $ui-light-base;
+      }
+    }
+  }
+}
+
+.caret--rotate {
+  transform: rotateX(180deg);
+}

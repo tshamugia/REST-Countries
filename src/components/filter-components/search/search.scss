@@ -1,0 +1,33 @@
+@import "../../../sass/variable";
+
+.search {
+  width: 100%;
+  max-width: 17rem;
+
+  @media (max-width: 600px) {
+    max-width: 90vw;
+  }
+
+  .search__box {
+    width: 100%;
+    border: 1px solid rgb(227, 224, 224);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 3rem;
+  }
+
+  input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: $bg-light-color;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
