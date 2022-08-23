@@ -1,19 +1,28 @@
 import './card.scss'
+import {Link} from 'react-router-dom';
 
-function Card(){
+
+function Card({data}){
+
+
 
     return (
+        
+      
+        <Link to={'/detail'} className='card' >
+
             <div className='card'>
-               
-                    <img src='#' alt='pic' className='card__img'></img>
-                
+             <img src={data.flags.png} alt='pic' className='card__img'></img>
                 <div className='card__body'>
-                    <header className='title'></header>
-                    <span className='population'>Population:</span>
-                    <span className='region'>Region:</span>
-                    <span className='capital'>Capital:</span>
+                    <header className='title'>{data.name.common}</header>
+                    <span ><span className='strong'>Population:  </span>{data.population }</span>
+                    <span ><span className='strong'>Region: </span>   {data.region}</span>
+                    <span ><span className="strong">Capital:</span>  {data.capital}</span> 
                 </div>
             </div>
+        </Link>
+       
+        
     
         )
 }

@@ -10,7 +10,7 @@ function FilterByRegion() {
   return (
     <div className="dropdown">
       <div className="dropdown__select" onClick={() => setOpen(!open)}>
-        <spna className="dropdown__select--selected">{selected}</spna>
+        <span className="dropdown__select--selected">{selected}</span>
         <div className={open ? "dropdown__select--caret caret--rotate" : "dropdown__select--caret"}></div>
       </div>
       {open && (
