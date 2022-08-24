@@ -13,7 +13,7 @@ function App() {
      
      <Routes>
       <Route path="/" element={<Dashboard/>} />
-      <Route path="/detail" element={<Detail/>} />
+      <Route path="/:country" element={<Detail/>} />
       <Route path="*" element={<NotFound />}/>
      </Routes>
      

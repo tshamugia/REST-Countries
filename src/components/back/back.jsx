@@ -1,13 +1,15 @@
 import './back.scss';
 import { ImArrowLeft2 } from "react-icons/im";
 
-function Back(){
+function Back({navigate}){
+   
+
     return(
         
-            <a href='/' className="go-back">
+            <button type='button' onClick={()=> navigate(-1)} className="go-back">
                 <span><ImArrowLeft2></ImArrowLeft2></span>
                 <span>Back</span>
-            </a>
+            </button>
        
 
     )

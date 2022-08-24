@@ -9,7 +9,7 @@ function Card({data}){
     return (
         
       
-        <Link to={'/detail'} className='card' >
+        <Link to={'/country'.replace('country',data.name.common)} className='card' >
 
             <div className='card'>
              <img src={data.flags.png} alt='pic' className='card__img'></img>

@@ -2,37 +2,14 @@
 
 import Card from '../../components/card/card';
 import './dashboard.scss';
-import {useEffect, useState} from 'react';
-import { ALL_COUNTRIES } from '../../api/config';
-import axios from 'axios';
 import FilterLayout from '../../components/filter-components/filter.layout';
+import {useContext} from 'react';
+import { CountryContext } from '../../context/CountryContext';
 
 function Dashboard(){
-    const [countries, setCountries] = useState([]);
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
-    console.log(countries);
-
-
-    useEffect(()=>{
-        setLoading(true)
-        const fetchCountries = async ()=>{
-
-            try{
-                const response = await axios.get(ALL_COUNTRIES);
-                setCountries(response.data);
-            }catch(err){
-
-                  setError(err.message);
-            }
-            finally{
-                setLoading(false);
-            }
-
-        }
-        fetchCountries();
-    },[])
-
+    
+    const {country, error, loading} = useContext(CountryContext);
+    console.log(country)
 
 
     return (
@@ -46,7 +23,7 @@ function Dashboard(){
             
 
             <div className='row'>
-                 {countries.map((data, k)=>(
+                 {country.map((data, k)=>(
                      
                      <Card key={k} data={data}/>
                      
