@@ -1,7 +1,42 @@
-.detail__container{
+.detail__container {
+  width: 100%;
+  max-width: 90rem;
+  margin: 3rem auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.data-container {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  height: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__flag {
+    border: 1px solid green;
     width: 100%;
-    max-width: 90rem;
-    margin: 0 auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    height: 100%;
+    max-width: 40rem;
+    max-height: 30rem;
+    border-radius: 0.4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__data {
+    &--info {
+      display: flex;
+    }
+
+    &--borders {
+      display: flex;
+    }
+  }
 }
