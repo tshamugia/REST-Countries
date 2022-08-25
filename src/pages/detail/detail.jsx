@@ -35,30 +35,29 @@ function Detail() {
         data.map((item, k) => (
           <div className="data-container" key={k}>
             <div className="data-container__flag">
-              <img src={item.flags.png} alt={k}></img>
+              <img src={item.flags.svg} alt={k}></img>
             </div>
 
             <div className="data-container__data">
               <h1>{item.name.common}</h1>
               <div className="data-container__data--info">
                 <ul>
-                  <li>{item.population}</li>
-                  <li>{item.region}</li>
-                  <li>{item.capital}</li>
-                  <li>{item.name.common}</li>
-                  <li>{item.status}</li>
+                  <li><span>Native Name: </span>{item.name.common}</li>
+                  <li><span>Population: </span>{item.population}</li>
+                  <li><span>Region: </span>{item.region}</li>
+                  <li><span>Sub Region: </span>{item.subregion}</li>
+                  <li><span>Capital: </span>{item.capital}</li>
                 </ul>
                 <ul>
-                  <li>{item.population}</li>
-                  <li>{item.region}</li>
-                  <li>{item.capital}</li>
-                  <li>{item.name.common}</li>
-                  <li>{item.status}</li>
+                  <li><span>Top Level Domain: </span>{item.tld}</li>
+                  <li><span>Currencies: </span></li>
+                  <li><span>Languages: </span>{Object.values(item.languages)}</li>
+                  
                 </ul>
               </div>
               <div className="data-container__data--borders">
-                <span>Borders: </span>
-                <span>germany</span>
+                <h5>Border countries: </h5>
+                <ul><li>germany</li></ul>
               </div>
             </div>
           </div>
