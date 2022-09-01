@@ -1,6 +1,7 @@
 import { ImContrast } from "react-icons/im";
 import { useEffect, useState } from "react";
 import "./header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [theme, setTheme] = useState("light");
@@ -18,7 +19,9 @@ function Header() {
   return (
     <div className="header">
       <div className="header_container">
-        <span className="title">Where in the world?</span>
+        <Link to={"/"} className="title">
+          Where in the world?
+        </Link>
 
         <div className="switcher" onClick={(console.log("clicked"), toggleTheme)}>
           <ImContrast></ImContrast>
