@@ -8,10 +8,13 @@ function CountryContextProvider({ children }) {
   const [country, setCountries] = useState([]);
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState("");
+  const [theme, setTheme] = useState("light");
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  console.log("country --->", country);
+
+
+  
 
   useEffect(() => {
     setLoading(true);
@@ -21,8 +24,14 @@ function CountryContextProvider({ children }) {
       .finally(() => setLoading(false));
   }, []);
 
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+    const header = document.querySelector(".header");
+    header.setAttribute("data-theme", theme);
+  }, [theme]);
+
   return (
-    <CountryContext.Provider value={{ country, error, loading, setQuery, query, region, setRegion }}>
+    <CountryContext.Provider value={{ country, error, loading, setQuery, query, region, setRegion, setCountries, theme, setTheme}}>
       {children}
     </CountryContext.Provider>
   );

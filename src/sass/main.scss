@@ -12,6 +12,11 @@ body[data-theme="dark"] {
   background-color: $bg-dark-color;
   color: $text-dark;
 
+  input{
+    background-color:$ui-dark-base;
+    border-radius: 0.3rem;
+  }
+
   
 }
 
@@ -25,4 +30,5 @@ body {
   margin: 0;
   font-size: 16px;
   font-weight: 300;
+  
 }

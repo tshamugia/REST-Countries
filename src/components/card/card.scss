@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
-
-  
+    
+    
     text-decoration: none;
     color: $text-light;
     
@@ -37,17 +37,18 @@
         padding: 1rem;
         border-bottom-left-radius: 0.4rem;
         border-bottom-right-radius: 0.4rem;
-        background-color: $ui-light-base;
         
-       
 
-
+        
+        
+        
+        
         .strong{
             font-weight: 800;
             font-size: 14px;
         }
-
-
+        
+        
         header{
             margin-bottom: 0.6rem;
             font-weight: 800;
@@ -55,5 +56,10 @@
         }
         
     }
+    
+}
 
+.dark{
+    background-color: $ui-dark-base;
+    color: $text-dark;
 }

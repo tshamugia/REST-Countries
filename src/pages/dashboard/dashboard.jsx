@@ -5,8 +5,10 @@ import { useContext } from "react";
 import { CountryContext } from "../../context/CountryContext";
 
 function Dashboard() {
-  const { error, loading, country, query, region } = useContext(CountryContext);
+  const { error, loading, country, query, region} = useContext(CountryContext);
 
+  
+  
   return (
     <>
       <FilterLayout />
@@ -17,17 +19,27 @@ function Dashboard() {
         ) : (
           <div className="row">
             {country
-              // eslint-disable-next-line array-callback-return
-              .filter((data) => {
-                if (query === "" || region === "") {
-                  return data;
-                } else if (data.name.common.toLowerCase().includes(query.toLowerCase())) {
-                  return data;
-                } else if (data.region.includes(region)) {
-                  return data;
-                }
-              })
-              .map((data, k) => (
+            
+            // eslint-disable-next-line array-callback-return
+            .filter((data)=>{
+
+              if(region === ""){
+                return data;
+              }else if(data.region.includes(region)){
+                return data;
+              }
+
+          })
+          // eslint-disable-next-line array-callback-return
+          .filter((data)=>{
+
+            if(query === ""){
+              return data;
+            }else if(data.name.common.toLowerCase().includes(query.toLowerCase())){
+              return data;
+            }
+          })
+          .map((data, k) => (
                 <Card key={k} data={data} />
               ))}
           </div>

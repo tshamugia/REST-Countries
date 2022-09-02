@@ -27,13 +27,22 @@
     justify-content: space-between;
     align-items: center;
 
-    .title {
+    .title-light {
       font-size: 18px;
       font-weight: 800;
       background-color: $ui-light-base;
       border: none;
       text-decoration: none;
-      color: black;
+      color: $text-light;;
+    }
+
+    .title-dark {
+      font-size: 18px;
+      font-weight: 800;
+      background-color: $ui-dark-base;
+      border: none;
+      text-decoration: none;
+      color: $text-dark;;
     }
 
     .switcher {

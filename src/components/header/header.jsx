@@ -1,29 +1,26 @@
 import { ImContrast } from "react-icons/im";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
+import { CountryContext } from "../../context/CountryContext";
 
 function Header() {
-  const [theme, setTheme] = useState("light");
+  const {theme, setTheme} = useContext(CountryContext);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-    const header = document.querySelector(".header");
-    header.setAttribute("data-theme", theme);
-  }, [theme]);
+  
 
   return (
     <div className="header">
       <div className="header_container">
-        <Link to={"/"} className="title">
+        <Link to={"/"} className={theme === 'light' ? "title-light" : 'title-dark'}>
           Where in the world?
         </Link>
 
-        <div className="switcher" onClick={(console.log("clicked"), toggleTheme)}>
+        <div className="switcher" onClick={toggleTheme}>
           <ImContrast></ImContrast>
           {theme === "light" ? <span>Dark Mode</span> : <span>Light Mode</span>}
         </div>

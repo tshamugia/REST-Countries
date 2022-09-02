@@ -5,6 +5,7 @@ import { CountryContext } from "../../../context/CountryContext";
 
 function Search() {
   const { query, setQuery } = useContext(CountryContext);
+  
   return (
     <form className="search">
       <div className="search__box">
