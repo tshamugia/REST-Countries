@@ -102,16 +102,18 @@ function Detail() {
 
                 <ul>
                   {neighbours.map((neig, k) => (
+                    <>
+                    {neig.cioc}
                     <Link
                       key={k}
                       to={"/:country".replace(":country", neig.name.common)}
                       onClick={() => setLink(country)}
                     >
                       <li>
-                        {neig.cioc}
                         <img alt="flag" src={neig.flags.png} />
                       </li>
                     </Link>
+                    </>
                   ))}
                 </ul>
               </div>

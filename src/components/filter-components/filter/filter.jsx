@@ -32,7 +32,7 @@ function FilterByRegion() {
 
   return (
     <div className="dropdown" ref={ref}>
-      <div className={theme === "light" ? "dropdown__select" : "dropdown__select dark" } onClick={() => setOpen(!open)}>
+      <div className={`dropdown__select ${theme}`} onClick={() => setOpen(!open)}>
         <span className="dropdown__select--selected">{region === "" ? "Filter by Region...." : region}</span>
         <div className={open ? "dropdown__select--caret caret--rotate" : "dropdown__select--caret"}></div>
       </div>

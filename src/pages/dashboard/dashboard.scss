@@ -25,6 +25,20 @@
            justify-content: center;
             
         }
+
+        @media (max-width: 1000px) {
+            
+            justify-content: center;
+            gap: 5rem;
+             
+         }
+
+         @media (max-width: 1278px) {
+            
+            justify-content: center;
+            gap: 5rem;
+             
+         }
     }
 }
 

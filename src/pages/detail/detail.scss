@@ -74,11 +74,12 @@
         padding-left: 0;
 
         a:link {
+          list-style: none;
           text-decoration: none;
           color: black;
 
           &:visited {
-            color: black;
+            color:inherit;
           }
         }
         li {

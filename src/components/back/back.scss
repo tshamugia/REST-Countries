@@ -16,3 +16,8 @@
   border-radius: 0.3rem;
   cursor: pointer;
 }
+
+.dark{
+  background-color: $ui-dark-base;
+  color: $text-dark;
+}
